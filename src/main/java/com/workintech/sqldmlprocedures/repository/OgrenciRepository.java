@@ -15,7 +15,7 @@ public interface OgrenciRepository extends JpaRepository<Ogrenci, Long> {
 
     @Query(value = "SELECT * FROM ogrencilistesi()", nativeQuery = true)
     List<Ogrenci> findAllOgrenci();
-
+//
     @Transactional
     @Modifying
     @Query(value = "CALL public.sil(:ogrNo)", nativeQuery = true)
